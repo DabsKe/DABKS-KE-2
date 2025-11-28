@@ -1,0 +1,84 @@
+<!doctype html>
+<div class="services-hero">
+<div class="bg" aria-hidden="true"></div>
+<div class="services-content">
+<div class="services-grid">
+<div class="services-list">
+<h2>Transport & Trucking Services</h2>
+<ul class="services">
+<li class="service">General cargo transportation</li>
+<li class="service">Containerized cargo delivery (20ft &amp; 40ft)</li>
+<li class="service">Bulk cargo and construction material haulage</li>
+<li class="service">Refrigerated / temperature-controlled transport (future expansion)</li>
+<li class="service">Hazardous cargo transport (specialized compliance)</li>
+</ul>
+
+
+<h2 style="margin-top:18px">Logistics Services</h2>
+<ul class="services">
+<li class="service">Freight coordination</li>
+<li class="service">Route planning and scheduling</li>
+<li class="service">Warehousing &amp; distribution support</li>
+<li class="service">Customs clearing facilitation (through partners)</li>
+<li class="service">Last-mile delivery solutions</li>
+</ul>
+</div>
+
+
+<aside class="side">
+<h3>Why choose us</h3>
+<p>Regional experience • Compliance-focused • Reliable fleet • Partnered customs & warehousing</p>
+
+
+<h3 style="margin-top:12px">Contact</h3>
+<p style="margin:0 0 8px">Email: hello@ealogistics.example</p>
+<p style="margin:0">Phone: +254 7XX XXX XXX</p>
+
+
+<div style="margin-top:12px">
+<a href="#contact" data-target="contact" onclick="navigate(event)" style="display:inline-block;padding:10px 12px;border-radius:8px;background:var(--accent);color:#fff">Get a Quote</a>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT / FOOTER PAGE -->
+<section id="contact" class="page">
+<div style="min-height:60vh;display:grid;place-items:center;padding:40px;background:linear-gradient(180deg,#071328,#05203a);color:#cfe8ff">
+<div style="max-width:760px;padding:28px;background:rgba(255,255,255,0.03);border-radius:12px">
+<h2>Contact & Bookings</h2>
+<p>To request transport, obtain a quote or discuss a logistics solution, email <strong>hello@ealogistics.example</strong> or call +254 7XX XXX XXX. Provide origin, destination, cargo type and approximate weight/volume for a fast response.</p>
+<div style="margin-top:12px;display:flex;gap:10px">
+<a class="cta" href="mailto:hello@ealogistics.example">Email Us</a>
+<a class="cta" href="#services" data-target="services" onclick="navigate(event)" style="background:#0ea5a4">View Services</a>
+</div>
+</div>
+</div>
+<footer>
+&copy; <span id="year"></span> East Africa Logistics — All rights reserved
+</footer>
+</section>
+
+
+<script>
+// simple client-side navigation for this single-file demo
+function navigate(e){
+if(e) e.preventDefault();
+var target = (e && e.currentTarget && e.currentTarget.dataset && e.currentTarget.dataset.target) || (typeof e === 'string' && e) || (location.hash && location.hash.replace('#','')) || 'home';
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+var el = document.getElementById(target) || document.querySelector('[id="'+target+'"]');
+if(el) el.classList.add('active');
+// update URL hash
+history.replaceState(null,'', '#'+target);
+// ensure video plays when returning to home
+if(target==='home'){
+var v = document.getElementById('bgvid'); if(v && v.paused) v.play().catch(()=>{});
+}
+window.scrollTo(0,0);
+}
+// init from hash
+(function(){
+</html>
